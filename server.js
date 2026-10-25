@@ -5,13 +5,13 @@ const crypto = require('crypto');
 
 const PORT = Number(process.env.PORT || 3000);
 const ROOT = __dirname;
-const DATA = path.join(ROOT, 'data');
+const DATA = process.env.DATA_DIR || path.join(ROOT, 'data');
 const USERS_FILE = path.join(DATA, 'users.json');
 const TUTORIALS_FILE = path.join(DATA, 'tutorials.json');
 const sessions = new Map();
 
 fs.mkdirSync(DATA, { recursive: true });
-if (!fs.existsSync(TUTORIALS_FILE)) fs.copyFileSync(path.join(DATA, 'tutorials.example.json'), TUTORIALS_FILE);
+if (!fs.existsSync(TUTORIALS_FILE)) fs.copyFileSync(path.join(ROOT, 'data', 'tutorials.example.json'), TUTORIALS_FILE);
 if (!fs.existsSync(USERS_FILE)) fs.writeFileSync(USERS_FILE, '[]');
 
 const read = file => JSON.parse(fs.readFileSync(file, 'utf8'));
