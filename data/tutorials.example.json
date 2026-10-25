@@ -1,0 +1,22 @@
+[
+  {
+    "id": "getting-started",
+    "title": "新手入门：如何选择在线学习工具",
+    "summary": "从需求、价格、隐私与售后政策四个角度，建立你的选择清单。",
+    "category": "效率工具",
+    "url": "https://example.com/guide",
+    "isPromotion": false,
+    "status": "published",
+    "clicks": 0
+  },
+  {
+    "id": "ai-writing",
+    "title": "AI 写作工具使用指南",
+    "summary": "了解常见功能、计费模式与数据处理政策；具体价格和政策以服务商页面为准。",
+    "category": "AI 工具",
+    "url": "https://example.com/partner",
+    "isPromotion": true,
+    "status": "published",
+    "clicks": 0
+  }
+]
