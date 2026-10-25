@@ -20,6 +20,10 @@ npm start
 
 未设置时会生成仅供本地演示的管理员账号，并在控制台显示一次随机密码。部署前务必设置以上两个变量，并使用持久化磁盘保存 `data/`。
 
+## 部署到 Render
+
+仓库内的 `render.yaml` 会创建一个新加坡区域的 Node.js Web Service，并把 1 GB 持久化磁盘挂载到 `/var/data`。首次创建 Blueprint 时，Render 会提示填写 `ADMIN_EMAIL` 和 `ADMIN_PASSWORD`。磁盘与付费计算方案会产生费用，请在 Render 确认页面核对当前价格后再应用。
+
 ## 合规说明
 
 - 推广内容会以“推广链接 / 合作链接”显示。
